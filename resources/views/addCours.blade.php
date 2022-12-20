@@ -349,7 +349,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label >Une image de la Formation :</label>
-											<input type="text" class="form-control">
+											<input type="file" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -420,7 +420,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Video :</label>
-											<input type="text" class="form-control">
+											<input type="file" class="form-control">
 										</div>
 									</div>
 									<div class="col-md-12">
@@ -444,7 +444,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Video :</label>
-											<input type="text" class="form-control">
+											<input type="file" class="form-control">
 										</div>
 									</div>
 									<div class="col-md-12">
@@ -468,7 +468,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Video :</label>
-											<input type="text" class="form-control">
+											<input type="file" class="form-control">
 										</div>
 									</div>
 									<div class="col-md-12">
