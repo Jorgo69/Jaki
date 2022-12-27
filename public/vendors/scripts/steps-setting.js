@@ -4,7 +4,7 @@ $(".tab-wizard").steps({
 	transitionEffect: "fade",
 	titleTemplate: '<span class="step">#index#</span> #title#',
 	labels: {
-		finish: "Submit"
+		// finish: "submit"
 	},
 	onStepChanged: function (event, currentIndex, priorIndex) {
 		$('.steps .current').prevAll().addClass('disabled');
@@ -17,10 +17,10 @@ $(".tab-wizard").steps({
 $(".tab-wizard2").steps({
 	headerTag: "h5",
 	bodyTag: "section",
-	transitionEffect: "fade",
+	// transitionEffect: "fade",
 	titleTemplate: '<span class="step">#index#</span> <span class="info">#title#</span>',
 	labels: {
-		finish: "Soumettre",
+		// finish: "Submit",
 		next: "Next",
 		previous: "Previous",
 	},

@@ -281,7 +281,7 @@
 						</a>
 						<ul class="submenu">
 							<li><a href="#">Basic Tables</a></li>
-							<li><a href="{{ route('admin.Dashbord')}}">DataTables</a></li>
+							{{-- <li><a href="{{ route('admin.Dashbord')}}">DataTables</a></li> --}}
 						</ul>
 					</li>
 
@@ -330,7 +330,9 @@
 						{{-- <p class="mb-30">jQuery Step wizard</p> --}}
 					</div>
 					<div class="wizard-content">
-						<form class="tab-wizard wizard-circle wizard">
+						<form class="tab-wizard wizard-circle wizard" action="{{ route('create.Cours') }}" method="post" enctype= "multipart/form-data">
+							@csrf
+
 							<h5>Tout les détails sur la Formation</h5>
 							<section>
 								<div class="row">
@@ -341,7 +343,7 @@
 									
 										<div class="form-group">
 											<label >Titre de la Formation :</label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control"name="titre_cours">
 										</div>
 									</div>
 									
@@ -349,7 +351,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label >Une image de la Formation :</label>
-											<input type="file" class="form-control">
+											<input type="file" class="form-control"name="url_image">
 										</div>
 									</div>
 								</div>
@@ -357,7 +359,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label> Categorie de la Formation ? :</label>
-											<select class="custom-select form-control">
+											<select class="custom-select form-control"name="categorie_cours">
 												<option value="">Immobilier</option>
 												<option value="Amsterdam">Agricole</option>
 												<option value="Berlin">...</option>
@@ -368,7 +370,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Langue :</label>
-											<select class="custom-select form-control">
+											<select class="custom-select form-control"name="langue_cours">
 												<option value="Français" selected>Français</option>
 												{{-- <option value="Valeur">Valeur</option> --}}
 											</select>
@@ -377,10 +379,10 @@
 									
 								</div>
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-md-4">
 										<div class="form-group">
 											<label>Difficultés :</label>
-											<select class="custom-select form-control">
+											<select class="custom-select form-control"name="difficulte_cours">
 												<option> --- </option>
 												<option value="Debutant"> Debutant</option>
 												<option value="Moyen"> Moyen</option>
@@ -388,10 +390,10 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-md-4">
 										<div class="form-group">
 											<label>Debouchés :</label>
-											<select class="custom-select form-control">
+											<select class="custom-select form-control"name="debouche_cours">
 												<option> --- </option>
 												<option value="Entrepreneur"> Entrepreneur</option>
 												<option value="Investisseur"> Investisseur</option>
@@ -399,10 +401,25 @@
 											</select>
 										</div>
 									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label>Durée :</label>
+											<select class="custom-select form-control"name="duree_cours">
+												<option> Definir une Durée </option>
+												<option value="1 Mois"> 1 Mois</option>
+												<option value="2 Mois"> 2 Mois</option>
+												<option value="3 Mois"> 3 Mois </option>
+												<option value="4 Mois"> 4 Mois </option>
+												<option value="5 Mois"> 5 Mois </option>
+												<option value="6 Mois"> 6 Mois </option>
+												<option value="7 Mois"> 7 Mois </option>
+											</select>
+										</div>
+									</div>
 										<div class="col-md-12">
 										<div class="form-group">
 											<label>Description</label>
-											<textarea class="form-control"></textarea>
+											<textarea class="form-control"name="description_cours"></textarea>
 										</div>
 									</div>
 								</div>
@@ -414,19 +431,19 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label> Titre de la Video </label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control"name="plan_un">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Video :</label>
-											<input type="file" class="form-control">
+											<input type="file" class="form-control"name="video_un">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
 											<label> Description :</label>
-											<textarea class="form-control"></textarea>
+											<textarea class="form-control"name="description_un"></textarea>
 										</div>
 									</div>
 								</div>
@@ -438,19 +455,19 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label> Titre de la Video </label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control"name="plan_deux">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Video :</label>
-											<input type="file" class="form-control">
+											<input type="file" class="form-control"name="video_deux">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
 											<label> Description :</label>
-											<textarea class="form-control"></textarea>
+											<textarea class="form-control"name="description_deux"></textarea>
 										</div>
 									</div>
 								</div>
@@ -462,24 +479,23 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label> Titre de la Video </label>
-											<input type="text" class="form-control">
+											<input type="text" class="form-control"name="plan_trois">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Video :</label>
-											<input type="file" class="form-control">
+											<input type="file" class="form-control"name="video_trois">
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
 											<label> Description :</label>
-											<textarea class="form-control"></textarea>
+											<textarea class="form-control"name="description_trois"></textarea>
 										</div>
 									</div>
 								</div>
 							</section>
-						</form>
 					</div>
 				</div>
 
@@ -490,16 +506,19 @@
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 							<div class="modal-body text-center font-18">
-								<h3 class="mb-20">Form Submitted!</h3>
+								<h3 class="mb-20"> Soumission des Cours </h3>
 								<div class="mb-30 text-center"><img src="vendors/images/success.png"></div>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								 Merci de bien vouloir appuyer sur Envoyer
 							</div>
 							<div class="modal-footer justify-content-center">
-								<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+								<button type="submit" class="btn btn-primary"> Envoyer </button>
 							</div>
 						</div>
 					</div>
 				</div>
+
+			</form>
+
 				<!-- success Popup html End -->
 			</div>
 			

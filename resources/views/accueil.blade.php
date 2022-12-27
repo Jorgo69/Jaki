@@ -159,7 +159,6 @@ Besoin de suivre une formation de qualité qui vous oriente et qui vous accompag
 						
 							<!-- LAYER NR. 4 -->
 						
-						
 						</li>
 						<!-- SLIDE  -->
 					</ul>
@@ -183,6 +182,7 @@ Besoin de suivre une formation de qualité qui vous oriente et qui vous accompag
 										<i class="fa fa-bank text-primary"></i>
 									</div>
 									<h4><a href="#">Formation de Qualité</a></h4>
+									<iframe width="500" height="320" src="https://youtu.be/TALgv8BPL1k" controls> </iframe>
 									<a href="#" class="btn radius-xl">View More</a>
 								</div>
 							</div>

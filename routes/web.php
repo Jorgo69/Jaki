@@ -10,6 +10,7 @@ use App\Http\Controllers\OurCoursesController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TransactionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,3 +52,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/AdminDashboard', [AdminControllers::class, 'AdDash'])->name('AdminDashboard');
 Route::get('/AddCours', [AdminControllers::class, 'AddCours'])->name('AddCours');
 Route::get('/Transactions',[AdminControllers::class, 'adminTransaction']) ->name('admin.Dashbord');
+
+// Add Cours
+Route::post('/createCours', [AdminControllers::class, 'createCours'])->name('createCours');
+Route::post('/createCour', [AdminControllers::class, 'Enregistrer'])->name('create.Cours');
+
+// Transaction
+Route::get('transaction',[TransactionController::class, 'index']) -> name('transaction');

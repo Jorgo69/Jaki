@@ -3,7 +3,8 @@
             <div class="top-bar">
                 <div class="container">
                     <div class="row d-flex justify-content-between">
-                        <div class="topbar-left">
+                        <div class="topbar">
+                            <div class="topbar-left">
                             <ul>
                                 <li><a href="{{ route('faq') }}"><i class="fa fa-question-circle"></i> Questions </a></li>
                                 <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
@@ -14,13 +15,15 @@
                                 <li>
                                     <select class="header-lang-bx">
                                        <option > {{-- <i class="flag flag-benin"></i> Benin --}}  </option>
-                                        {{-- <option data-icon="flag flag-us">English US</option> --}}
                                     </select>
                                 </li>
                                 <li><a href="{{ route ('login') }}">Login</a></li>
                                 <li><a href="{{ route ('register') }}">Register</a></li>
                             </ul>
                         </div>
+                        </div>
+                        
+                        
                     </div>
                 </div>
             </div>
