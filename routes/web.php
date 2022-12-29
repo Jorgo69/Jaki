@@ -5,6 +5,7 @@ use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DashBordController;
 use App\Http\Controllers\ForgetPasswordController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\OurCoursesController;
 use App\Http\Controllers\PageController;
@@ -45,13 +46,15 @@ Route::get('Mot de Passe Oublié', [InscriptionController::class, 'forgetPasswor
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 // Admin
 Route::get('/AdminDashboard', [AdminControllers::class, 'AdDash'])->name('AdminDashboard');
 Route::get('/AddCours', [AdminControllers::class, 'AddCours'])->name('AddCours');
+Route::get('Les Cours', [AdminControllers::class, 'mesCours']) -> name('MesCours');
 Route::get('/Transactions',[AdminControllers::class, 'adminTransaction']) ->name('admin.Dashbord');
+Route::get('Reçu', [AdminControllers::class, 'recu'])-> name('Recu');
 
 // Add Cours
 Route::post('/createCours', [AdminControllers::class, 'createCours'])->name('createCours');

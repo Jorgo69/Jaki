@@ -193,7 +193,7 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="{{ route('AddCours')}}">Créer un Cours</a></li>
-                        <li><a href="advanced-components.html">Consulter mes Cours</a></li>
+                        <li><a href="{{ route('MesCours')}}">Consulter mes Cours</a></li>
 
                     </ul>
                 </li>
@@ -202,8 +202,8 @@
                         <span class="micon dw dw-library"></span><span class="mtext">Transaction</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="basic-table.html">Basic Tables</a></li>
-                        <li><a href="{{ route('admin.Dashbord')}}">DataTables</a></li>
+                        {{-- <li><a href="basic-table.html">Basic Tables</a></li> --}}
+                        <li><a href="{{ route('transaction')}}">DataTables</a></li>
                     </ul>
                 </li>
 

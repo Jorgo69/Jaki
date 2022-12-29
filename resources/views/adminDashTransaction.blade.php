@@ -160,6 +160,7 @@
 			</div>
 		</div>
 	</div>
+	
 	@endsection
 	
 	<!-- buttons for Export datatable -->

@@ -23,8 +23,14 @@ class AdminControllers extends Controller
     public function mesCours()
     {
   
-        return view('mesCours');
+        return view('coursConsulter');
     }
+
+    public function recu()
+    {
+        return view('recu');
+    }
+
 
 
 
