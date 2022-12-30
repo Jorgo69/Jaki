@@ -97,11 +97,11 @@
 								<div class="col-md-6 col-lg-4 col-sm-6 m-b30">
 									<div class="cours-bx">
 										<div class="action-box">
-											<img src="assets/images/courses/pic1.jpg" alt="">
-											<a href="#" class="btn">Voir Plus</a>
+											<a href="{{ route('ourCourses')}}"> <img src="assets/images/courses/pic1.jpg" hre alt=""> </a>
+											<a href="{{ route('ourCourses')}}" class="btn">Voir Plus</a>
 										</div>
 										<div class="info-bx text-center">
-											<h5><a href="#">Technique d'Investissement </a></h5>
+											<h5><a href="{{ route('ourCourses') }}">Technique d'Investissement </a></h5>
 											<span> Immobilier </span>
 										</div>
 										<div class="cours-more-info">

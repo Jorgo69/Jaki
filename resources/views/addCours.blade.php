@@ -130,7 +130,7 @@
 									
 								</div>
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label>Difficultés :</label>
 											<select class="custom-select form-control"name="difficulte_cours">
@@ -141,7 +141,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label>Debouchés :</label>
 											<select class="custom-select form-control"name="debouche_cours">
@@ -152,7 +152,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label>Durée :</label>
 											<select class="custom-select form-control"name="duree_cours">
@@ -165,6 +165,12 @@
 												<option value="6 Mois"> 6 Mois </option>
 												<option value="7 Mois"> 7 Mois </option>
 											</select>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label>Prix :</label>
+											<input id="demo2" type="text" value="0" name="demo2">
 										</div>
 									</div>
 										<div class="col-md-12">
@@ -282,5 +288,15 @@
 	<script src="vendors/scripts/layout-settings.js"></script>
 	<script src="src/plugins/jquery-steps/jquery.steps.js"></script>
 	<script src="vendors/scripts/steps-setting.js"></script>
+	
+	<!-- switchery js -->
+	<script src="src/plugins/switchery/switchery.min.js"></script>
+	<!-- bootstrap-tagsinput js -->
+	<script src="src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+	<!-- bootstrap-touchspin js -->
+	<script src="src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+	<script src="vendors/scripts/advanced-components.js"></script>
+
+
 </body>
 </html>

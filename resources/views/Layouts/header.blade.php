@@ -87,7 +87,7 @@
                                             <h5 class="menu-adv-title">Mes Courses</h5>
                                             <ul>
                                                 <li><a href="{{ route('courses')}}"> Formations </a></li>
-                                                <li><a href="{{ route('ourCourses')}}"> Details Formations</a></li>
+                                                {{-- <li><a href="{{ route('ourCourses')}}"> Details Formations</a></li> --}}
                                             </ul>
                                         </li>
                                         <li class="add-menu-right">
